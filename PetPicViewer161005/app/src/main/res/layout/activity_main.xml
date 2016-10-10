@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_padding"
+    android:paddingLeft="@dimen/activity_horizontal_padding"
+    android:paddingRight="@dimen/activity_horizontal_padding"
+    android:paddingTop="@dimen/activity_vertical_padding"
+    tools:context="com.lhj.petpicviewer161005.MainActivity">
+
+    <TextView
+        android:id="@+id/textStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strStart"
+        android:textSize="@dimen/text_basic_size" />
+
+    <CheckBox
+        android:id="@+id/chkAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strAgree" />
+
+    <TextView
+        android:id="@+id/textAsk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strAsk"
+        android:textSize="@dimen/text_basic_size"
+        android:visibility="invisible" />
+
+    <RadioGroup
+        android:id="@+id/rdgPet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" >
+
+        <RadioButton
+            android:id="@+id/rdbDog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strDog" />
+
+        <RadioButton
+            android:id="@+id/rdbCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strCat" />
+
+        <RadioButton
+            android:id="@+id/rdbRabbit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strRabbit" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/BtnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strOk"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imgPet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:contentDescription="@string/desPet" />
+
+</LinearLayout>
