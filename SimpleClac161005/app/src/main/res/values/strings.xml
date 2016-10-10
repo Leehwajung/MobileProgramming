@@ -6,5 +6,9 @@
     <string name="strSub">빼기</string>
     <string name="strMul">곱하기</string>
     <string name="strDiv">나누기</string>
+    <string name="strMod">나머지 값</string>
     <string name="strResult">계산 결과</string>
+
+    <string name="errBlank">값을 입력하십시오.</string>
+    <string name="errDiv0">0으로 나눌 수 없습니다.</string>
 </resources>

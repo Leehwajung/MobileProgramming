@@ -15,14 +15,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/widget_margin"
-        android:hint="@string/strOperand1" />
+        android:hint="@string/strOperand1"
+        android:maxLines="1"
+        android:minLines="1"
+        android:inputType="number|numberSigned|numberDecimal" />
 
     <EditText
         android:id="@+id/editOperand2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/widget_margin"
-        android:hint="@string/strOperand2" />
+        android:hint="@string/strOperand2"
+        android:maxLines="1"
+        android:minLines="1"
+        android:inputType="number|numberSigned|numberDecimal"
+        android:singleLine="true" />
 
     <Button
         android:id="@+id/btnAdd"
@@ -51,6 +58,13 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/widget_margin"
         android:text="@string/strDiv" />
+
+    <Button
+        android:id="@+id/btnMod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/widget_margin"
+        android:text="@string/strMod" />
 
     <TextView
         android:id="@+id/textResult"

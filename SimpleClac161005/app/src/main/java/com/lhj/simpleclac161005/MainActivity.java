@@ -2,19 +2,19 @@ package com.lhj.simpleclac161005;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
     private EditText editOperand1, editOperand2;
-    private Button btnAdd, btnSub, btnMul, btnDiv;
+    private Button btnAdd, btnSub, btnMul, btnDiv, btnMod;
     private TextView textResult;
-    private String operand1, operand2;
-    private Integer result;
+    private Double operand1, operand2;
+    private Double result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,51 +29,91 @@ public class MainActivity extends Activity {
         btnSub = (Button) findViewById(R.id.btnSub);
         btnMul = (Button) findViewById(R.id.btnMul);
         btnDiv = (Button) findViewById(R.id.btnDiv);
+        btnMod = (Button) findViewById(R.id.btnMod);
 
         textResult = (TextView) findViewById(R.id.textResult);
 
-        btnAdd.setOnTouchListener(new View.OnTouchListener() {
+        btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                operand1 = editOperand1.getText().toString();
-                operand2 = editOperand2.getText().toString();
-                result = Integer.parseInt(operand1) + Integer.parseInt(operand2);
-                textResult.setText(getText(R.string.strResult) + ": " + result.toString());
-                return false;
+            public void onClick(View view) {
+                if (getOperands()) {
+                    return;
+                }
+                result = operand1 + operand2;
+                setResult();
             }
         });
 
-        btnSub.setOnTouchListener(new View.OnTouchListener() {
+        btnSub.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                operand1 = editOperand1.getText().toString();
-                operand2 = editOperand2.getText().toString();
-                result = Integer.parseInt(operand1) - Integer.parseInt(operand2);
-                textResult.setText(getText(R.string.strResult) + ": " + result.toString());
-                return false;
+            public void onClick(View view) {
+                if (getOperands()) {
+                    return;
+                }
+                result = operand1 - operand2;
+                setResult();
             }
         });
 
-        btnMul.setOnTouchListener(new View.OnTouchListener() {
+        btnMul.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                operand1 = editOperand1.getText().toString();
-                operand2 = editOperand2.getText().toString();
-                result = Integer.parseInt(operand1) * Integer.parseInt(operand2);
-                textResult.setText(getText(R.string.strResult) + ": " + result.toString());
-                return false;
+            public void onClick(View view) {
+                if (getOperands()) {
+                    return;
+                }
+                result = operand1 * operand2;
+                setResult();
             }
         });
 
-        btnDiv.setOnTouchListener(new View.OnTouchListener() {
+        btnDiv.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                operand1 = editOperand1.getText().toString();
-                operand2 = editOperand2.getText().toString();
-                result = Integer.parseInt(operand1) / Integer.parseInt(operand2);
-                textResult.setText(getText(R.string.strResult) + ": " + result.toString());
-                return false;
+            public void onClick(View view) {
+                if (getOperands()) {
+                    return;
+                }
+                result = operand1 / operand2;
+                if (result.isInfinite()) {
+                    messageDividedByZeroError();
+                    return;
+                }
+                setResult();
             }
         });
+
+        btnMod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (getOperands()) {
+                    return;
+                }
+                result = operand1 % operand2;
+                if (result.isNaN()) {
+                    messageDividedByZeroError();
+                    return;
+                }
+                setResult();
+            }
+        });
+    }
+
+    private boolean getOperands() {
+        String strOperand1 = editOperand1.getText().toString();
+        String strOperand2 = editOperand2.getText().toString();
+        if (strOperand1.isEmpty() || strOperand2.isEmpty()) {
+            Toast.makeText(getApplicationContext(), R.string.errBlank, Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        operand1 = Double.parseDouble(strOperand1);
+        operand2 = Double.parseDouble(strOperand2);
+        return false;
+    }
+
+    private void setResult() {
+        textResult.setText(getText(R.string.strResult) + ": " + result);
+    }
+
+    private void messageDividedByZeroError() {
+        Toast.makeText(getApplicationContext(), R.string.errDiv0, Toast.LENGTH_SHORT).show();
     }
 }
