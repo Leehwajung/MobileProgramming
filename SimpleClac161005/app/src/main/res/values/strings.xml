@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">초간단 계산기</string>
+    <string name="strOperand1">숫자1</string>
+    <string name="strOperand2">숫자2</string>
+    <string name="strAdd">더하기</string>
+    <string name="strSub">빼기</string>
+    <string name="strMul">곱하기</string>
+    <string name="strDiv">나누기</string>
+    <string name="strResult">계산 결과</string>
+</resources>
