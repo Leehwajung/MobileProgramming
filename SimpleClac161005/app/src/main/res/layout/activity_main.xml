@@ -10,6 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.lhj.simpleclac161005.MainActivity">
 
+    <!-- 피연산자 1 -->
     <EditText
         android:id="@+id/editOperand1"
         android:layout_width="wrap_content"
@@ -20,6 +21,7 @@
         android:minLines="1"
         android:inputType="number|numberSigned|numberDecimal" />
 
+    <!-- 피연산자 2 -->
     <EditText
         android:id="@+id/editOperand2"
         android:layout_width="wrap_content"
@@ -31,6 +33,7 @@
         android:inputType="number|numberSigned|numberDecimal"
         android:singleLine="true" />
 
+    <!-- 더하기 버튼 -->
     <Button
         android:id="@+id/btnAdd"
         android:layout_width="match_parent"
@@ -38,6 +41,7 @@
         android:layout_margin="@dimen/widget_margin"
         android:text="@string/strAdd" />
 
+    <!-- 빼기 버튼 -->
     <Button
         android:id="@+id/btnSub"
         android:layout_width="match_parent"
@@ -45,6 +49,7 @@
         android:layout_margin="@dimen/widget_margin"
         android:text="@string/strSub" />
 
+    <!-- 곱하기 버튼 -->
     <Button
         android:id="@+id/btnMul"
         android:layout_width="match_parent"
@@ -52,6 +57,7 @@
         android:layout_margin="@dimen/widget_margin"
         android:text="@string/strMul" />
 
+    <!-- 나누기 버튼 -->
     <Button
         android:id="@+id/btnDiv"
         android:layout_width="match_parent"
@@ -59,6 +65,7 @@
         android:layout_margin="@dimen/widget_margin"
         android:text="@string/strDiv" />
 
+    <!-- 나머지 값 버튼 -->
     <Button
         android:id="@+id/btnMod"
         android:layout_width="match_parent"
@@ -66,6 +73,7 @@
         android:layout_margin="@dimen/widget_margin"
         android:text="@string/strMod" />
 
+    <!-- 결과값 -->
     <TextView
         android:id="@+id/textResult"
         android:layout_width="wrap_content"

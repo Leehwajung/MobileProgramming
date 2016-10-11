@@ -10,6 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_padding"
     tools:context="com.lhj.petpicviewer161005.MainActivity">
 
+    <!-- 시작 유도 문구 -->
     <TextView
         android:id="@+id/textStart"
         android:layout_width="wrap_content"
@@ -17,12 +18,14 @@
         android:text="@string/strStart"
         android:textSize="@dimen/text_basic_size" />
 
+    <!-- 시작 체크 -->
     <CheckBox
         android:id="@+id/chkAgree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/strAgree" />
 
+    <!-- 선택 유도 문구 -->
     <TextView
         android:id="@+id/textAsk"
         android:layout_width="wrap_content"
@@ -31,24 +34,28 @@
         android:textSize="@dimen/text_basic_size"
         android:visibility="invisible" />
 
+    <!-- 라디오 버튼 그룹 -->
     <RadioGroup
         android:id="@+id/rdgPet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible" >
 
+        <!-- 강아지 선택 -->
         <RadioButton
             android:id="@+id/rdbDog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/strDog" />
 
+        <!-- 고양이 선택 -->
         <RadioButton
             android:id="@+id/rdbCat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/strCat" />
 
+        <!-- 토끼 선택 -->
         <RadioButton
             android:id="@+id/rdbRabbit"
             android:layout_width="wrap_content"
@@ -56,6 +63,7 @@
             android:text="@string/strRabbit" />
     </RadioGroup>
 
+    <!-- 선택 완료 버튼 -->
     <Button
         android:id="@+id/BtnOk"
         android:layout_width="wrap_content"
@@ -63,6 +71,7 @@
         android:text="@string/strOk"
         android:visibility="invisible" />
 
+    <!-- 사진 출력 -->
     <ImageView
         android:id="@+id/imgPet"
         android:layout_width="wrap_content"

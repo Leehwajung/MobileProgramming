@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
         btnOk = (Button) findViewById(R.id.BtnOk);
         imgPet = (ImageView) findViewById(R.id.imgPet);
 
-        // 동의함 체크박스의 체크가 변경되면
+        // 시작 체크박스의 체크 여부가 변경되면
         chkAgree.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 // 체크되면 모두 보이도록 설정
@@ -53,7 +53,6 @@ public class MainActivity extends Activity {
         // 선택확인 버튼을 클릭하면
         btnOk.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-
                 switch (rdgPet.getCheckedRadioButtonId()) {
                     case R.id.rdbDog:
                         imgPet.setImageResource(R.drawable.dog);
@@ -65,7 +64,8 @@ public class MainActivity extends Activity {
                         imgPet.setImageResource(R.drawable.rabbit);
                         break;
                     default:
-                        Toast.makeText(getApplicationContext(), R.string.errSelect, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),
+                                R.string.errSelect, Toast.LENGTH_SHORT).show();
                 }
             }
         });
