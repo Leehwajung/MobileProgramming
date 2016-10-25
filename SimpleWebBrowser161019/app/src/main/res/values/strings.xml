@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">웹 브라우저</string>
+    <string name="lblMainActivity">간단 웹 브라우저</string>
+    <string name="strGo">이동</string>
+    <string name="strBack">이전</string>
+    <string name="hintInputUrl">URL을 입력하세요.</string>
+</resources>
