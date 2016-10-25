@@ -7,32 +7,22 @@
     android:orientation="vertical"
     tools:context="com.lhj.reservationmaker161019.MainActivity">
 
-    <LinearLayout
+    <Chronometer
+        android:id="@+id/crnTakenTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
-
-        <Chronometer
-            android:id="@+id/crnTakenTime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:format="  예약 소요 시간  %s "
-            android:gravity="center"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/btnStart"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/strStart" />
-    </LinearLayout>
+        android:format="  예약 소요 시간  %s "
+        android:gravity="center"
+        android:textSize="20sp" />
 
     <RadioGroup
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/rdgDateTime">
 
         <RadioButton
-            android:id="@+id/rdbCal"
+            android:id="@+id/rdbDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/strCalSet" />
@@ -50,83 +40,98 @@
         android:layout_weight="1"
         android:gravity="center" >
 
-        <CalendarView
-            android:id="@+id/calReservation"
+        <DatePicker
+            android:id="@+id/dpcReservation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:showWeekNumber="false" />
+            android:gravity="center"
+            android:visibility="invisible" />
 
         <TimePicker
             android:id="@+id/tpcReservation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:timePickerMode="spinner" />
+            android:timePickerMode="spinner"
+            android:gravity="center"
+            android:visibility="invisible" />
     </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorFooter" >
-
-        <Button
-            android:id="@+id/btnFinish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/strFinish" />
+        android:background="@color/colorFooter"
+        android:gravity="center">
 
         <TextView
-            android:id="@+id/textInitYear"
+            android:id="@+id/textYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/strInitYear" />
+            android:text="@string/strInitYear"
+            android:layout_marginLeft="@dimen/textview_margin" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/strYear" />
+            android:text="@string/strYear"
+            android:layout_marginRight="@dimen/textview_margin" />
 
         <TextView
-            android:id="@+id/textInitMonth"
+            android:id="@+id/textMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/strInitMonth" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/strMonth" />
-
-        <TextView
-            android:id="@+id/textInitDay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/strInitDay" />
+            android:text="@string/strInitMonth"
+            android:layout_marginLeft="@dimen/textview_margin" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/strDay" />
+            android:text="@string/strMonth"
+            android:layout_marginRight="@dimen/textview_margin" />
 
         <TextView
-            android:id="@+id/textInitHour"
+            android:id="@+id/textDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/strInitHour" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/strHour" />
-
-        <TextView
-            android:id="@+id/textInitMinute"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/strInitMinute" />
+            android:text="@string/strInitDay"
+            android:layout_marginLeft="@dimen/textview_margin" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/strMinute" />
+            android:text="@string/strDay"
+            android:layout_marginRight="@dimen/textview_margin" />
+
+        <TextView
+            android:id="@+id/textHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strInitHour"
+            android:layout_marginLeft="@dimen/textview_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strHour"
+            android:layout_marginRight="@dimen/textview_margin" />
+
+        <TextView
+            android:id="@+id/textMinute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strInitMinute"
+            android:layout_marginLeft="@dimen/textview_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strMinute"
+            android:layout_marginRight="@dimen/textview_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strReserved"
+            android:layout_marginLeft="@dimen/textview_margin"
+            android:layout_marginRight="@dimen/textview_margin" />
     </LinearLayout>
 </LinearLayout>

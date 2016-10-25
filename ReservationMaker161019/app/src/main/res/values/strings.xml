@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">시간 예약</string>
-    <string name="strStart">예약 시작</string>
-    <string name="strCalSet">날짜 설정 (캘린더뷰)</string>
+    <string name="strCalSet">날짜 설정</string>
     <string name="strTimeSet">시간 설정</string>
-    <string name="strFinish">예약완료</string>
     <string name="strInitYear">0000</string>
     <string name="strYear">년</string>
     <string name="strInitMonth">00</string>
@@ -13,5 +11,6 @@
     <string name="strInitHour">00</string>
     <string name="strHour">시</string>
     <string name="strInitMinute">00</string>
-    <string name="strMinute">분 예약됨</string>
+    <string name="strMinute">분</string>
+    <string name="strReserved">예약됨</string>
 </resources>
