@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:context="com.lhj.reservationmaker161019.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Chronometer
+            android:id="@+id/crnTakenTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:format="  예약 소요 시간  %s "
+            android:gravity="center"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/strStart" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/rdbCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strCalSet" />
+
+        <RadioButton
+            android:id="@+id/rdbTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strTimeSet" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <CalendarView
+            android:id="@+id/calReservation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:showWeekNumber="false" />
+
+        <TimePicker
+            android:id="@+id/tpcReservation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:timePickerMode="spinner" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorFooter" >
+
+        <Button
+            android:id="@+id/btnFinish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strFinish" />
+
+        <TextView
+            android:id="@+id/textInitYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strInitYear" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strYear" />
+
+        <TextView
+            android:id="@+id/textInitMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strInitMonth" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strMonth" />
+
+        <TextView
+            android:id="@+id/textInitDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strInitDay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strDay" />
+
+        <TextView
+            android:id="@+id/textInitHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strInitHour" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strHour" />
+
+        <TextView
+            android:id="@+id/textInitMinute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strInitMinute" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strMinute" />
+    </LinearLayout>
+</LinearLayout>
