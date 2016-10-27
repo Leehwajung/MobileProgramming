@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">시간 예약</string>
-    <string name="strCalSet">날짜 설정</string>
+    <string name="activityMain">시간 예약</string>
+    <string name="strStart">예약 시작</string> 
+    <string name="strCalSet">날짜 설정 (캘린더 뷰)</string>
     <string name="strTimeSet">시간 설정</string>
+    <string name="strFinish">예약 완료</string>
     <string name="strInitYear">0000</string>
     <string name="strYear">년</string>
     <string name="strInitMonth">00</string>
