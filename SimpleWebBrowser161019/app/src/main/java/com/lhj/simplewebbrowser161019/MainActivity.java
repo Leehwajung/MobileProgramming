@@ -1,5 +1,6 @@
 package com.lhj.simplewebbrowser161019;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +20,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // 액션바 아이콘 활성화
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayShowHomeEnabled(true);
+            actionBar.setIcon(R.drawable.web);
+        }
 
         // 위젯
         edtUrl = (EditText) findViewById(R.id.edtUrl);
