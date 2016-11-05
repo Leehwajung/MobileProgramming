@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PetPicSelector</string>
+    <string name="activityMain">연습 문제 7–6</string>
+    <string name="strDog">강아지</string>
+    <string name="strCat">고양이</string>
+    <string name="strRabbit">토끼</string>
+    <string name="strHorse">말</string>
+    <string name="strSelect">그림 보기</string>
+    <string name="strClose">닫기</string>
+    <string name="errNotSelected">동물을 선택하세요.</string>
+    <string name="desImgPet">동물 사진</string>
+</resources>
