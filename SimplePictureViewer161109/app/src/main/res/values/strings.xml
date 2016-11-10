@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">간단 이미지 뷰어</string>
+    <string name="strPrev">이전 그림</string>
+    <string name="strNext">다음 그림</string>
+    <string name="errPermission">앱을 사용하려면 파일 접근 권한 허용에 동의하십시오. 앱을 종료합니다.</string>
+    <string name="errNoFile">그림이 없습니다.</string>
+    <string name="errFirst">첫 번째 그림입니다.</string>
+    <string name="errLast">마지막 그림입니다.</string>
+</resources>
