@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">미니 포토샵</string>
+    <string name="desZoomIn">확대</string>
+    <string name="desZoomOut">축소</string>
+    <string name="desRotate">회전</string>
+    <string name="desBright">밝게</string>
+    <string name="desDark">어둡게</string>
+    <string name="desGray">회색조</string>
+</resources>
