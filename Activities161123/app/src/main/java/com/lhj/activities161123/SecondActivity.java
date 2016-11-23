@@ -12,6 +12,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        // 버튼을 선택하면 엑티비티 종료
         final Button btnReturn = (Button) findViewById(R.id.btnReturn);
         btnReturn.setOnClickListener(new View.OnClickListener() {
             @Override

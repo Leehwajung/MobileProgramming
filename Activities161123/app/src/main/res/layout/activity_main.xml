@@ -11,6 +11,26 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.lhj.activities161123.MainActivity">
 
+    <RadioGroup
+        android:id="@+id/rdgSelectAct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/rdbSecondAct"
+            android:text="@string/activitySecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/rdbThirdAct"
+            android:text="@string/activityThird"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </RadioGroup>
+
     <Button
         android:id="@+id/btnNewAct"
         android:text="@string/strNewAct"
