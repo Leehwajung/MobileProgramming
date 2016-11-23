@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Activities</string>
+    <string name="activityMain">메인 엑티비티</string>
+    <string name="activitySecond">두 번째 엑티비티</string>
+    <string name="strNewAct">새 화면 열기</string>
+    <string name="strReturn">돌아가기</string>
+</resources>
